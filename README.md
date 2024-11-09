@@ -134,7 +134,7 @@ Each route can contain the following properties:
 
 | Name    | Required? | Description                                                           | Example                      |
 |---------|-----------|-----------------------------------------------------------------------|------------------------------|
-| paths   | Required  | List of request paths to match. By default, performs full matching. Adding `*` at the end will perform prefix matching, but not including '/' characters. Adding `**` will perform arbitrary matching, matching all characters. For example, `/foo*` can match `/foobar`, but not `/foo/bar`. `/foo**` can match both `/foo/bar` and `/foo/car/far`. | `["/", "/foo", "/bar/*", "/baz/**"]` |
+| paths   | Required  | List of request paths to match. By default, performs full matching. Adding `*` at the end will perform prefix matching, but not including '/' characters. Adding `**` will perform arbitrary matching, matching all characters. For example, `/foo*` can match `/foobar`, but not `/foo/bar`. `/foo**` can match both `/foo/bar` and `/foo/car/far`. Adding a suffix pattern like `**.jpg` will match all paths ending with `.jpg`. For instance, `**.jpg` would match `/images/photo.jpg` and `/uploads/profile.jpg`. | `["/", "/foo", "/bar/*", "/baz/**", "**.jpg"]` |
 | methods | Optional  | List of HTTP methods to match. Valid values: "GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS", "CONNECT", "TRACE", and "ALL". If not specified, defaults to "ALL". | `["GET", "POST"]`                   |
 | meta    | Optional  | Metadata to be returned when the route matches.                        | `{ id: 1 }`            |
 

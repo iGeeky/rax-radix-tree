@@ -1,6 +1,6 @@
 {
   "name": "rax-radix-tree",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node.js binding for rax, a radix tree implementation in ANSI C (https://github.com/antirez/rax)",
   "author": "igeeky.io@gmail.com",
   "license": "MIT",
